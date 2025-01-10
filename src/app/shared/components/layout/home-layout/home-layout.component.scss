@@ -1,0 +1,21 @@
+.mat-drawer-container {
+  min-height: 100%;
+
+  .mat-drawer {
+    width: 200px !important;
+    padding: 10px;
+  }
+
+  .mat-mdc-list-item {
+    padding-left: 0;
+    cursor: pointer;
+
+    .mat-mdc-list-item-icon {
+      margin-left: 0;
+    }
+  }
+
+  .mat-drawer-content {
+    min-height: 100vh;
+  }
+}

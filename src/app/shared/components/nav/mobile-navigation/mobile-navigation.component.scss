@@ -1,0 +1,16 @@
+.sidenav {
+  margin-top: 8px;
+  display: flex;
+  flex-direction: column;
+}
+
+.sidenav-link {
+  padding: 5px 8px;
+  text-decoration: none;
+  color: black;
+  border-radius: 2px;
+}
+
+.active {
+  background-color: blue;
+}

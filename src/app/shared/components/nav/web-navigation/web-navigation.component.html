@@ -1,0 +1,36 @@
+<mat-toolbar>
+  <nav class="nav">
+    <ul class="nav-list">
+      <li>
+        <a class="nav-link" routerLink="/home/dashboard">Dashboard</a>
+      </li>
+      <li>
+        <a class="nav-link" routerLink="/home/boards">Boards</a>
+      </li>
+      <li>
+        <a class="nav-link" routerLink="/home/issues">Issues</a>
+      </li>
+      <li>
+        <a class="nav-link" routerLink="/home/projects">Projects</a>
+      </li>
+    </ul>
+  </nav>
+  <button class="menu-btn" (click)="onShowDrawer.emit()">
+    <mat-icon>menu</mat-icon>
+  </button>
+  <span class="spacer"></span>
+  <span role="button" class="profile" [matMenuTriggerFor]="menu">
+    <img
+      height="25"
+      width="25"
+      src="https://img.freepik.com/free-vector/young-prince-vector-illustration_1308-174367.jpg?t=st=1736499320~exp=1736502920~hmac=8e4b12b97be2e1d2fc9d928a0987691ef70dfd16170c1bde5338a1185d1dd581&w=360"
+    />
+  </span>
+  <mat-menu #menu="matMenu">
+    <ng-template matMenuContent>
+      <button mat-menu-item>Item 1</button>
+      <button mat-menu-item>Item 2</button>
+    </ng-template>
+  </mat-menu>
+</mat-toolbar>
+<ng-content></ng-content>

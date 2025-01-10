@@ -1,0 +1,47 @@
+.mat-toolbar-single-row {
+  height: 40px;
+  background-color: var(--mat-sys-on-primary);
+}
+
+.nav-list {
+  display: flex;
+  gap: 10px;
+
+  .nav-link {
+    color: black;
+    text-decoration: none;
+    font-size: var(--mat-sys-body-large-size);
+  }
+}
+
+.spacer {
+  flex: 1 1 auto;
+}
+
+.menu-btn {
+  display: none;
+}
+
+.nav {
+  display: block;
+}
+
+.profile {
+  display: block;
+  border: 1px solid black;
+  height: 25px;
+  width: 25px;
+  overflow: hidden;
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+@media only screen and (max-width: 600px) {
+  .menu-btn {
+    display: block;
+  }
+
+  .nav {
+    display: none;
+  }
+}

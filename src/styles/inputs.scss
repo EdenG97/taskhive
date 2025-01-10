@@ -1,0 +1,26 @@
+.mat-mdc-form-field[appearance="outline"] {
+  width: 100%;
+  font-size: 12px;
+  --mat-form-field-container-height: 40px;
+  --mat-form-field-container-vertical-padding: 8px;
+  --mat-sys-body-large-size: 0.8rem;
+
+  .mat-icon {
+    height: 19px !important;
+  }
+
+  .material-icons {
+    font-size: 18px;
+  }
+
+  .mat-mdc-icon-button .mat-mdc-button-persistent-ripple::before {
+    top: 5px !important;
+    left: 5px !important;
+    right: 5px !important;
+    bottom: 5px !important;
+  }
+
+  .mdc-floating-label--float-above {
+    font-size: 13px !important;
+  }
+}

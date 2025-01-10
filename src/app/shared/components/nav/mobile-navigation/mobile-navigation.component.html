@@ -1,0 +1,11 @@
+<nav class="sidenav">
+  @for (nav of navList(); track nav.label) {
+    <a
+      class="sidenav-link"
+      [class.active]="nav.isActive"
+      (click)="navigate(nav.url)"
+    >
+      {{ nav.label }}
+    </a>
+  }
+</nav>

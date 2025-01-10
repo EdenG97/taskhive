@@ -1,0 +1,13 @@
+<mat-drawer-container>
+  <mat-drawer #drawer mode="over">
+    <h2>TaskHive</h2>
+    <app-mobile-navigation
+      (onShowDrawer)="showDrawer()"
+    ></app-mobile-navigation>
+  </mat-drawer>
+  <mat-drawer-content>
+    <app-web-navigation (onShowDrawer)="showDrawer()">
+      <router-outlet></router-outlet>
+    </app-web-navigation>
+  </mat-drawer-content>
+</mat-drawer-container>
