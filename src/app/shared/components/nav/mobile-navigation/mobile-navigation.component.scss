@@ -5,12 +5,22 @@
 }
 
 .sidenav-link {
-  padding: 5px 8px;
+  padding: 8px 8px;
   text-decoration: none;
   color: black;
-  border-radius: 2px;
 }
 
 .active {
-  background-color: blue;
+  background-color: rgba(61, 61, 192, 0.418);
+}
+
+.active::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  height: 20px;
+  width: 4px;
+  background-color: rgb(53, 53, 253);
+  border-top-right-radius: 5px;
+  border-bottom-right-radius: 5px;
 }

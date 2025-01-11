@@ -1,12 +1,11 @@
-<form class="form-container" [formGroup]="loginForm" (submit)="submitForm()">
-  <mat-form-field appearance="outline">
+<form class="form-container" [formGroup]="form" (submit)="submitForm()">
+  <mat-form-field appearance="outline" subscriptSizing="dynamic">
     <mat-label>Email</mat-label>
     <input matInput formControlName="email" />
-    @if (emailErrorMessage) {
-      <mat-error>{{ emailErrorMessage }}</mat-error>
-    }
+    <mat-error>{{ emailError }}</mat-error>
   </mat-form-field>
-  <mat-form-field appearance="outline">
+
+  <mat-form-field appearance="outline" subscriptSizing="dynamic">
     <mat-label>Password</mat-label>
     <button type="button" mat-icon-button matSuffix (click)="showPassword()">
       <mat-icon>{{
@@ -18,10 +17,9 @@
       [type]="isShowPassword() ? 'text' : 'password'"
       formControlName="password"
     />
-    @if (passwordErrorMessage) {
-      <mat-error>{{ passwordErrorMessage }}</mat-error>
-    }
+    <mat-error>{{ passwordError }}</mat-error>
   </mat-form-field>
+
   <button mat-flat-button type="submit">Login</button>
 </form>
 <p class="auth-link">

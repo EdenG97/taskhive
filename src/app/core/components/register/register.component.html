@@ -1,33 +1,53 @@
-<mat-form-field appearance="outline">
-  <mat-label>Fullname</mat-label>
-  <input type="text" matInput />
-</mat-form-field>
-<mat-form-field appearance="outline">
-  <mat-label>Email</mat-label>
-  <input type="email" matInput />
-</mat-form-field>
-<mat-form-field appearance="outline">
-  <mat-label>Password</mat-label>
-  <button type="button" mat-icon-button matSuffix (click)="showPassword()">
-    <mat-icon>{{
-      isShowPassword() ? "visibility_off" : "visibility"
-    }}</mat-icon>
-  </button>
-  <input matInput [type]="isShowPassword() ? 'text' : 'password'" />
-</mat-form-field>
-<mat-form-field appearance="outline">
-  <mat-label>Password</mat-label>
-  <button
-    type="button"
-    mat-icon-button
-    matSuffix
-    (click)="showConfirmPassword()"
-  >
-    <mat-icon>{{
-      isShowConfirmPassword() ? "visibility_off" : "visibility"
-    }}</mat-icon>
-  </button>
-  <input matInput [type]="isShowConfirmPassword() ? 'text' : 'password'" />
-</mat-form-field>
-<button mat-flat-button>Register</button>
+<form [formGroup]="form" (submit)="submitForm()">
+  <mat-form-field appearance="outline" subscriptSizing="dynamic">
+    <mat-label>Fullname</mat-label>
+    <input type="text" matInput formControlName="fullname" />
+    <mat-error>{{ fullnameError }}</mat-error>
+  </mat-form-field>
+
+  <mat-form-field appearance="outline" subscriptSizing="dynamic">
+    <mat-label>Email</mat-label>
+    <input type="email" matInput formControlName="email" />
+    <mat-error>{{ emailError }}</mat-error>
+  </mat-form-field>
+
+  <div formGroupName="credential">
+    <mat-form-field appearance="outline" subscriptSizing="dynamic">
+      <mat-label>Password</mat-label>
+      <button type="button" mat-icon-button matSuffix (click)="showPassword()">
+        <mat-icon>{{
+          isShowPassword() ? "visibility_off" : "visibility"
+        }}</mat-icon>
+      </button>
+      <input
+        matInput
+        [type]="isShowPassword() ? 'text' : 'password'"
+        formControlName="password"
+      />
+      <mat-error>{{ passwordError }}</mat-error>
+    </mat-form-field>
+
+    <mat-form-field appearance="outline" subscriptSizing="dynamic">
+      <mat-label>Confirm Password</mat-label>
+      <button
+        type="button"
+        mat-icon-button
+        matSuffix
+        (click)="showConfirmPassword()"
+      >
+        <mat-icon>{{
+          isShowConfirmPassword() ? "visibility_off" : "visibility"
+        }}</mat-icon>
+      </button>
+      <input
+        matInput
+        [type]="isShowConfirmPassword() ? 'text' : 'password'"
+        formControlName="confirmPassword"
+      />
+      <mat-error>{{ confirmPasswordError }}</mat-error>
+    </mat-form-field>
+  </div>
+
+  <button mat-flat-button>Register</button>
+</form>
 <p class="auth-link">Have an account ? <a routerLink="/auth/login">Login</a></p>

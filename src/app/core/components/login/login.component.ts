@@ -28,11 +28,10 @@ type LoginForm = {
     MatIconModule,
   ],
   templateUrl: './login.component.html',
-  styleUrl: './login.component.scss',
 })
 export class LoginComponent {
   isShowPassword = signal(false);
-  loginForm = new FormGroup<LoginForm>({
+  form = new FormGroup<LoginForm>({
     email: new FormControl('', [Validators.required, Validators.email]),
     password: new FormControl('', [Validators.required]),
   });
@@ -42,21 +41,20 @@ export class LoginComponent {
   }
 
   submitForm() {
-    if (!this.loginForm.valid) return;
+    if (!this.form.valid) return;
   }
 
-  get emailErrorMessage() {
-    if (this.loginForm.hasError('email', 'email')) return 'Email not valid.';
-    if (this.loginForm.hasError('required', 'email'))
-      return 'Email is required.';
+  get emailError() {
+    if (this.form.hasError('email', 'email')) return 'Email not valid';
+    if (this.form.hasError('required', 'email')) return 'Email is required';
 
-    return '';
+    return null;
   }
 
-  get passwordErrorMessage() {
-    if (this.loginForm.hasError('required', 'password'))
-      return 'Password is required.';
+  get passwordError() {
+    if (this.form.hasError('required', 'password'))
+      return 'Password is required';
 
-    return '';
+    return null;
   }
 }
