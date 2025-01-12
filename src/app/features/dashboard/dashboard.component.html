@@ -1,1 +1,48 @@
-<p>dashboard works!</p>
+<div class="content">
+  <h1>Summary</h1>
+  <br />
+
+  <div class="task-status">
+    <app-dashboard-task-status color="green" icon="check_circle_outline">
+    </app-dashboard-task-status>
+    <app-dashboard-task-status icon="border_color"></app-dashboard-task-status>
+    <app-dashboard-task-status icon="library_add"></app-dashboard-task-status>
+    <app-dashboard-task-status
+      color="red"
+      icon="calendar_today"
+    ></app-dashboard-task-status>
+  </div>
+
+  <div class="activity-log">
+    <mat-card>
+      <mat-card-content>
+        <p>Status overview</p>
+      </mat-card-content>
+    </mat-card>
+    <mat-card>
+      <mat-card-content>
+        <p>Recent activity</p>
+      </mat-card-content>
+    </mat-card>
+    <mat-card>
+      <mat-card-content>
+        <p>Priority breakdown</p>
+      </mat-card-content>
+    </mat-card>
+    <mat-card>
+      <mat-card-content>
+        <p>Types of work</p>
+      </mat-card-content>
+    </mat-card>
+    <mat-card>
+      <mat-card-content>
+        <p>Team workload</p>
+      </mat-card-content>
+    </mat-card>
+    <mat-card>
+      <mat-card-content>
+        <p>Epic progress</p>
+      </mat-card-content>
+    </mat-card>
+  </div>
+</div>

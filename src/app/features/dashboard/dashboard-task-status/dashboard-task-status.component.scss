@@ -1,0 +1,42 @@
+:host {
+  flex: 1;
+}
+
+.mat-mdc-card-content {
+  height: 60px;
+  overflow-y: visible;
+}
+
+.mat-mdc-card-content {
+  display: flex;
+  gap: 12px;
+}
+
+.icon-container {
+  display: flex;
+  align-items: center;
+  border-radius: 2px;
+  padding: 5px;
+}
+
+.mat-icon {
+  font-size: 17px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.green {
+  color: rgba(128, 128, 128, 0.507);
+  background: rgba(133, 214, 133, 0.61);
+}
+
+.red {
+  color: rgb(209, 78, 61);
+  background: rgba(214, 142, 133, 0.61);
+}
+
+.gray {
+  color: rgb(131, 131, 131);
+  background: rgba(226, 226, 226, 0.664);
+}

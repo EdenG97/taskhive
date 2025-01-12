@@ -6,6 +6,7 @@ import { provideHttpClient, withFetch } from '@angular/common/http';
 import en from '@angular/common/locales/en';
 import { provideAnimationsAsync } from '@angular/platform-browser/animations/async';
 import { routes } from './app.routes';
+import { provideCharts, withDefaultRegisterables } from 'ng2-charts';
 
 registerLocaleData(en);
 
@@ -14,6 +15,6 @@ export const appConfig: ApplicationConfig = {
     provideZoneChangeDetection({ eventCoalescing: true }),
     provideRouter(routes, withComponentInputBinding()),
     provideHttpClient(withFetch()),
-    provideAnimationsAsync(),
+    provideAnimationsAsync(), provideCharts(withDefaultRegisterables()),
   ],
 };

@@ -5,6 +5,7 @@
 @use "./styles/inputs.scss";
 @use "./styles/sidenav.scss";
 @use "./styles/menu.scss";
+@use "./styles/card.scss";
 
 html {
   @include mat.theme(
@@ -18,8 +19,6 @@ html {
       density: 0,
     )
   );
-
-  @include mat.sidenav-overrides(());
 }
 
 * {
